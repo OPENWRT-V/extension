@@ -34,7 +34,7 @@ endef
 
 define Package/preinstall-clash/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
-	$(CP) .preinstall.sh $(1)/etc/uci-defaults/preinstall-clash.sh
+	$(CP) ./preinstall.sh $(1)/etc/uci-defaults/preinstall-clash.sh
 	$(INSTALL_DIR) $(1)/usr/preinstall/clash
 	$(CP) ./files/luci-app-openclash_0.45.78-beta_all.ipk $(1)/usr/preinstall/clash/luci-app-openclash.ipk
 	$(INSTALL_DIR) $(1)/etc/openclash/core
