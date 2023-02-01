@@ -34,13 +34,15 @@ endef
 
 define Package/preinstall-clash/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
-	$(CP) ./preinstall.sh $(1)/etc/uci-defaults/preinstall-clash.sh
+	$(INSTALL_BIN) ./preinstall.sh $(1)/etc/uci-defaults/preinstall-clash.sh
+
 	$(INSTALL_DIR) $(1)/usr/preinstall/clash
-	$(CP) ./files/luci-app-openclash_0.45.78-beta_all.ipk $(1)/usr/preinstall/clash/luci-app-openclash.ipk
+	$(INSTALL_DATA) ./files/luci-app-openclash_0.45.78-beta_all.ipk $(1)/usr/preinstall/clash/luci-app-openclash.ipk
+	
 	$(INSTALL_DIR) $(1)/etc/openclash/core
-	$(CP) ./files/clash_dev_v1.12.0-8-ga5d5488 $(1)/etc/openclash/core/clash
-	$(CP) ./files/clash_tun_2022.11.25-8-g25028e7 $(1)/etc/openclash/core/clash_tun
-	$(CP) ./files/clash_meta_alpha-g7a64c432 $(1)/etc/openclash/core/clash_meta
+	$(INSTALL_BIN) ./files/clash_dev_v1.12.0-8-ga5d5488 $(1)/etc/openclash/core/clash
+	$(INSTALL_BIN) ./files/clash_tun_2022.11.25-8-g25028e7 $(1)/etc/openclash/core/clash_tun
+	$(INSTALL_BIN) ./files/clash_meta_alpha-g7a64c432 $(1)/etc/openclash/core/clash_meta
 endef
 
 $(eval $(call BuildPackage,preinstall-clash))

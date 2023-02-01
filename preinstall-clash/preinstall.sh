@@ -3,11 +3,28 @@
 logPath="/usr/preinstall/clash/run.log"
 ipkPath="/usr/preinstall/clash/luci-app-openclash.ipk"
 
-echo "Start at $(date +'%Y-%m-%d %H:%M:%S')" > $logPath
-echo "------------------------------------------" >> $logPath
+function now() {
+    echo $(date +'%Y-%m-%d %H:%M:%S')
+}
 
-echo "Install $ipkPath" >> $logPath
+function newline() {
+    echo "" >> $logPath
+}
+
+function divider() {
+    newline
+    echo "----------------------------------------------------------------------------------------" >> $logPath
+    newline
+}
+
+echo "[$(now)] Start" > $logPath
+
+divider
+
+echo "[$(now)] Install $ipkPath" >> $logPath
+newline
 opkg install $ipkPath 2>&1 >> $logPath
-echo "------------------------------------------" >> $logPath
 
-echo "Ends at $(date +'%Y-%m-%d %H:%M:%S')" >> $logPath
+divider
+
+echo "[$(now)] Finished" >> $logPath
