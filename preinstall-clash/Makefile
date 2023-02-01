@@ -33,10 +33,14 @@ define Build/Compile
 endef
 
 define Package/preinstall-clash/install
-	$(INSTALL_DIR) $(1)/usr/preinstall
-	$(CP) ./files/luci-app-openclash_0.45.78-beta_all.ipk $(1)/usr/preinstall/luci-app-openclash.ipk
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(CP) ./files/preinstall-clash.sh $(1)/etc/uci-defaults/preinstall-clash.sh
+	$(INSTALL_DIR) $(1)/usr/preinstall
+	$(CP) ./files/luci-app-openclash_0.45.78-beta_all.ipk $(1)/usr/preinstall/luci-app-openclash.ipk
+	$(INSTALL_DIR) $(1)/etc/openclash/core
+	$(CP) ./files/clash_dev_v1.12.0-8-ga5d5488 $(1)/etc/openclash/core/clash
+	$(CP) ./files/clash_tun_2022.11.25-8-g25028e7 $(1)/etc/openclash/core/clash_tun
+	$(CP) ./files/clash_meta_alpha-g7a64c432 $(1)/etc/openclash/core/clash_meta
 endef
 
 $(eval $(call BuildPackage,preinstall-clash))
