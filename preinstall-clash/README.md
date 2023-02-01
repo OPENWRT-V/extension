@@ -1,7 +1,7 @@
 # 预装文件
 
 * luci-app-openclash_0.45.78-beta_all.ipk
-  * [介绍](https://github.com/vernesong/OpenClash/releases/tag/v0.45.78-beta)
+  * [说明](https://github.com/vernesong/OpenClash/releases/tag/v0.45.78-beta)
   * [下载](https://github.com/vernesong/OpenClash/releases/download/v0.45.78-beta/luci-app-openclash_0.45.78-beta_all.ipk)
 
 * clash_dev_v1.12.0-8-ga5d5488
