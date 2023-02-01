@@ -35,8 +35,8 @@ endef
 define Package/preinstall-clash/install
   $(INSTALL_DIR) $(1)/usr/preinstall
   $(CP) ./files/luci-app-openclash_0.45.78-beta_all.ipk $(1)/usr/preinstall/luci-app-openclash.ipk
-	$(INSTALL_DIR) $(1)/etc/uci-defaults
-	$(CP) ./files/preinstall-clash.sh $(1)/etc/uci-defaults/preinstall-clash.sh
+  $(INSTALL_DIR) $(1)/etc/uci-defaults
+  $(CP) ./files/preinstall-clash.sh $(1)/etc/uci-defaults/preinstall-clash.sh
 endef
 
 $(eval $(call BuildPackage,preinstall-clash))
