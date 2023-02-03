@@ -6,3 +6,6 @@
 
 * vlmcsd_svn1113-1_x86_64.ipk
   * [下载](https://github.com/cokebar/openwrt-vlmcsd/raw/gh-pages/vlmcsd_svn1113-1_x86_64.ipk)
+
+* vlmcsd.conf
+  * 配置文件
