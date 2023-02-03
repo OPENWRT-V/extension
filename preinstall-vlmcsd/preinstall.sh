@@ -43,7 +43,7 @@ divider
 
 echo "[$(now)] Restart Server" >> $log
 newline
-/etc/init.d/vlmcsd restart
+/etc/init.d/vlmcsd restart >> $log 2>&1
 
 divider
 
