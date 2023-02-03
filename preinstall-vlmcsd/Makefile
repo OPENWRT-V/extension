@@ -29,7 +29,7 @@ endef
 
 define Package/preinstall-vlmcsd/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
-	$(INSTALL_BIN) ./preinstall.sh $(1)/etc/uci-defaults/preinstall-vlmcsd.sh
+	$(INSTALL_BIN) ./preinstall.sh $(1)/etc/uci-defaults/xxxxxx_02_preinstall-vlmcsd.sh
 
 	$(INSTALL_DIR) $(1)/usr/preinstall/vlmcsd
 	$(INSTALL_DATA) ./files/vlmcsd_svn1113-1_x86_64.ipk $(1)/usr/preinstall/vlmcsd/vlmcsd.ipk
