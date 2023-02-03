@@ -31,12 +31,10 @@ define Package/preinstall-vlmcsd/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./preinstall.sh $(1)/etc/uci-defaults/preinstall-vlmcsd.sh
 
-	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_CONF) ./files/vlmcsd.conf $(1)/etc/config/vlmcsd
-
 	$(INSTALL_DIR) $(1)/usr/preinstall/vlmcsd
 	$(INSTALL_DATA) ./files/vlmcsd_svn1113-1_x86_64.ipk $(1)/usr/preinstall/vlmcsd/vlmcsd.ipk
 	$(INSTALL_DATA) ./files/luci-app-vlmcsd_1.0.2-1_all.ipk $(1)/usr/preinstall/vlmcsd/luci-app-vlmcsd.ipk
+	$(INSTALL_CONF) ./files/vlmcsd.conf $(1)/usr/preinstall/vlmcsd/vlmcsd.conf
 endef
 
 $(eval $(call BuildPackage,preinstall-vlmcsd))
