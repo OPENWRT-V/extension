@@ -24,13 +24,13 @@ divider
 
 echo "[$(now)] Install $ipk1" >> $log
 newline
-opkg install $ipk1 2>&1 >> $log
+opkg install $ipk1 >> $log 2>&1
 
 divider
 
 echo "[$(now)] Install $ipk2" >> $log
 newline
-opkg install $ipk2 2>&1 >> $log
+opkg install $ipk2 >> $log 2>&1
 
 divider
 

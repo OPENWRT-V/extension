@@ -23,7 +23,7 @@ divider
 
 echo "[$(now)] Install $ipk" >> $log
 newline
-opkg install $ipk 2>&1 >> $log
+opkg install $ipk >> $log 2>&1
 
 divider
 
