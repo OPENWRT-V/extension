@@ -11,6 +11,7 @@ define Package/extension-preinstall-vlmcsd
   CATEGORY:=Extension
   TITLE:=Preinstall Vlmcsd
   PKGARCH:=all
+  DEPENDS:=+extension-base
 endef
 
 define Package/extension-preinstall-vlmcsd/description

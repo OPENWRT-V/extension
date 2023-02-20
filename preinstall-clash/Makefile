@@ -16,7 +16,8 @@ define Package/extension-preinstall-clash
 +libcap +libcap-bin \
 +ruby +ruby-yaml \
 +kmod-tun +kmod-inet-diag +kmod-nft-tproxy \
-+luci +luci-compat
++luci +luci-compat \
++extension-base
 endef
 
 define Package/extension-preinstall-clash/description
