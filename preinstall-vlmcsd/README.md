@@ -6,3 +6,9 @@
 
 * vlmcsd_svn1113-1_x86_64.ipk
   * [下载](https://github.com/cokebar/openwrt-vlmcsd/raw/gh-pages/vlmcsd_svn1113-1_x86_64.ipk)
+
+# 配置项
+> [参考代码](https://github.com/cokebar/luci-app-vlmcsd/blob/master/files/luci/model/vlmcsd.lua)
+
+* 启用: 开启
+* 自动激活: 开启
