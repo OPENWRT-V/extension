@@ -31,10 +31,8 @@ define Package/extension-base/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./files/script/uci-defaults.sh $(1)/etc/uci-defaults/zzzzzzzzzz_extension_100.sh
 
-	$(INSTALL_DIR) $(1)/usr/extension/lib
-	$(INSTALL_DATA) ./files/script/common.sh $(1)/usr/extension/lib/common.sh
-
 	$(INSTALL_DIR) $(1)/usr/extension/base
+	$(INSTALL_DATA) ./files/script/library.sh $(1)/usr/extension/base/library.sh
 	$(INSTALL_DATA) ./files/script/setup.sh $(1)/usr/extension/base/setup.sh
 endef
 
