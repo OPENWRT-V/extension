@@ -12,7 +12,7 @@ define Package/preinstall-argon
   TITLE:=Preinstall Argon
   PKGARCH:=all
   DEPENDS:=+curl +jsonfilter \
-+luci +luci-compat +luci-lib-ipkg
++luci +luci-compat +luci-lib-ipkg +luci-i18n-base-zh-cn
 endef
 
 define Package/preinstall-argon/description
