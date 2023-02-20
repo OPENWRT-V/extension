@@ -30,6 +30,8 @@ endef
 define Package/configure-base/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./configure.sh $(1)/etc/uci-defaults/xxxxxx_80_configure-base.sh
+
+	$(INSTALL_DIR) $(1)/usr/configure/base
 endef
 
 $(eval $(call BuildPackage,configure-base))
