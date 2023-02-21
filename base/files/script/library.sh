@@ -11,10 +11,6 @@ function now() {
 }
 
 function toLittleCamel() {
-    if [ -z "$1" ]; then
-        echo "Fatal: toLittleCamel input is empty"
-        exit 1
-    fi
     local strs=($1)
     local result
     local i
