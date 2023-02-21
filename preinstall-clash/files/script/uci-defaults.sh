@@ -1,4 +1,3 @@
 #!/bin/bash
 
-source /usr/extension/base/library.sh
-execJob "preinstall-clash" "setup"
+bash -c "source /usr/extension/base/library.sh && execJob preinstall-clash setup" >> /dev/kmsg
