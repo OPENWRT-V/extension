@@ -35,7 +35,7 @@ define Package/extension-preinstall-argon/install
 
 	$(INSTALL_DIR) $(1)/usr/extension/preinstall-argon
 	$(INSTALL_DATA) ./files/script/setup.sh $(1)/usr/extension/preinstall-argon/setup.sh
-	$(INSTALL_DATA) ./files/ipk/luci-theme-argon-master_2.2.9.4_all.ipk $(1)/usr/extension/preinstall-argon/luci-theme-argon.ipk
+	$(INSTALL_DATA) ./files/ipk/luci-theme-argon_2.3.1_all.ipk $(1)/usr/extension/preinstall-argon/luci-theme-argon.ipk
 	$(INSTALL_DATA) ./files/ipk/luci-app-argon-config_0.9-20210309_all.ipk $(1)/usr/extension/preinstall-argon/luci-app-argon-config.ipk
 endef
 
